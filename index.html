@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset = "UTF-8">
+    <title>Biography</title>
+    <link rel="icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+
+<body onload="show()">
+    
+
+    <h1 class = "title">My Website</h1>
+    <h2 class = "title">Biography</h2>
+    <p>
+        <img src = "self.jpg" alt = "my_self" style = "float:middle; width:240px; height:240px; margin: 30px">
+    </p>
+
+    <p>
+        I am graduated from <a href = "http://www.kshs.kh.edu.tw/index.php?WebID=269">Koashiung senior high school.</a> 
+    </p>
+    <p>
+        I'm major in <a href = "http://www.me.ntu.edu.tw/main.php">mechanical engineering </a>now.
+    </p>
+    <p>
+        Member in NTUME racing team.
+    </p>
+    <h2 class = "title">Hobbies</h2>
+    <p><a href = "https://www.nba.com/lakers/">basketball</a></p>
+    <p><a href = "https://www.youtube.com/channel/UC8CU5nVhCQIdAGrFFp4loOQ">music</a></p>
+    <p><a href = "https://store.steampowered">fall guys</a></p>
+
+    <div class = "time">
+        <div id="nowDiv"></div>
+        <script>
+            function show(){
+            var date = new Date(); 
+            var now = "";
+        
+            now = now + (date.getMonth()+1); 
+            now = now + "-"
+            now = now + date.getDate();
+            now = now + "-"
+            now = now + date.getFullYear();
+            now = now + "  "; 
+            now = now + date.getHours();
+            now = now + ":"
+            now = now + date.getMinutes();
+            now = now + ":"
+            now = now + date.getSeconds();
+            document.getElementById("nowDiv"). innerHTML = now; 
+            setTimeout("show()",1000); 
+    }
+    </script>
+    
+    </div>
+    <audio class = "music" src="background.mp3" autoplay loop controls=true></audio>
+</body>
+
+
+<style>
+    .music{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    p {
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    h1 {color:green;}
+    h2 {color:rgb(119, 28, 194)}
+    a:link{color:blue}
+    a:visited{color:blue}
+    a:hover{color:red}
+    .time{
+        display:flex;
+        align-items:center;
+        justify-content:center;
+    }
+    .title{
+        align-items: center;
+        display: flex;
+        justify-content:center;
+    }
+</style>
+</html>
